@@ -9,6 +9,8 @@ inputs:
     value: $blueprint.ibm_region
   - name: vpc_name
     value: $blueprint.vpc_name
+  - name: image_id
+    value: $blueprint.image_id
 outputs:
 settings:
   - name: TF_VERSION
