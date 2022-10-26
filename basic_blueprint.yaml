@@ -1,0 +1,30 @@
+name: "Blueprint_Basic_2"
+type: "blueprint"
+schema_version: "1.0.0"
+description: "Simple three module blueprint. Deploys VPC, public gateway, and VSI"
+inputs:
+  - name: ibmcloud_api_key
+  - name: ibm_region
+  - name: vpc_name
+outputs:
+settings:
+  - name: TF_VERSION
+    value: 1.0
+modules:
+  - name: vpc_with_subnets_public_gateway
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/mattokc35/terraform-vpc-2-subnets/tree/main"
+    inputs:
+      - name: ibmcloud_api_key
+        value: $blueprint.ibmcloud_api_key
+      - name: ibm_region
+        value: $blueprint.ibm_region
+      - name: vpc_name
+        value: $blueprint.vpc_name
+    outputs:
+      - name: vpc
+      - name: subnet_zone_1
+      - name: subnet_zone_2
