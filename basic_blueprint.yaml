@@ -11,6 +11,14 @@ inputs:
     value: $blueprint.vpc_name
   - name: image_id
     value: $blueprint.image_id
+  - name: vsi_name
+    value: $blueprint.vsi_name
+  - name: vsi_profile
+    value: $blueprint.vsi_profile
+  - name: ssh_key_name
+    value: $blueprint.ssh_key_name
+  - name: ssh_key_public_key
+    value: $blueprint.ssh_key_public_key
 outputs:
 settings:
   - name: TF_VERSION
