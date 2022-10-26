@@ -46,8 +46,8 @@ modules:
         value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_1
       - name: vpc
         value: $module.vpc_with_subnets_public_gateway.outputs.vpc
-      - name: vsi_image_id
-        value: $blueprint.vsi_image_id
+      - name: image_id
+        value: $blueprint.image_id
       - name: vsi_name
         value: $blueprint.vsi_name
       - name: vsi_profile
