@@ -31,3 +31,29 @@ modules:
       - name: vpc
       - name: subnet_zone_1
       - name: subnet_zone_2
+  - name: vsi_module
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/mattokc35/ibmcloud-tf-vsi-module/tree/main"
+    inputs:
+      - name: ibmcloud_api_key
+        value: $blueprint.ibmcloud_api_key
+      - name: ibm_region
+        value: $blueprint.ibm_region
+      - name: subnet
+        value: $module.vpc_with_subnets_test.outputs.subnet_zone_1
+      - name: vpc
+        value: $module.vpc_with_subnets_test.outputs.vpc
+      - name: vsi_image_id
+        value: $blueprint.vsi_image_id
+      - name: vsi_name
+        value: $blueprint.vsi_name
+      - name: vsi_profile
+        value: $blueprint.vsi_profile
+      - name: ssh_key_name
+        value: $blueprint.ssh_key_name
+      - name: ssh_key_public_key
+        value: $blueprint.ssh_key_public_key
+    outputs: 
