@@ -91,11 +91,11 @@ modules:
         - name: resource_group_id
           value: $blueprint.resource_group_id
         - name: vpc_id
-          value: $module.vpc_with_subnets_test.outputs.vpc
+          value: $module.vpc_with_subnets_public_gateway.outputs.vpc
         - name: subnet1_id
-          value: $module.vpc_with_subnets_test.outputs.subnet_zone_1
+          value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_1
         - name: subnet2_id
-          value: $module.vpc_with_subnets_test.outputs.subnet_zone_2
+          value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_2
         - name: worker_count
           value: $blueprint.worker_count
         - name: cluster_name
