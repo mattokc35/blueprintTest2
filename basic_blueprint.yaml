@@ -93,35 +93,36 @@ modules:
       source_type: github
       git: 
         git_repo_url: "https://github.com/mattokc35/ibmcloudClusterModule/tree/main"
-      inputs:
-        - name: ibmcloud_api_key
-          value: $blueprint.ibmcloud_api_key
-        - name: ibm_region
-          value: $blueprint.ibm_region
-        - name: resource_group_id
-          value: $blueprint.resource_group_id
-        - name: vpc_id
-          value: $module.vpc_with_subnets_public_gateway.outputs.vpc
-        - name: subnet1_id
-          value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_1
-        - name: subnet2_id
-          value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_2
-        - name: worker_count
-          value: $blueprint.worker_count
-        - name: cluster_name
-          value: $blueprint.cluster_name
-        - name: kube_version
-          value: $blueprint.kube_version
-        - name: flavor
-          value: $blueprint.flavor
-      outputs: 
+    inputs:
+      - name: ibmcloud_api_key
+        value: $blueprint.ibmcloud_api_key
+      - name: ibm_region
+        value: $blueprint.ibm_region
+      - name: resource_group_id
+        value: $blueprint.resource_group_id
+      - name: vpc_id
+        value: $module.vpc_with_subnets_public_gateway.outputs.vpc
+      - name: subnet1_id
+        value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_1
+      - name: subnet2_id
+        value: $module.vpc_with_subnets_public_gateway.outputs.subnet_zone_2
+      - name: worker_count
+        value: $blueprint.worker_count
+      - name: cluster_name
+        value: $blueprint.cluster_name
+      - name: kube_version
+        value: $blueprint.kube_version
+      - name: flavor
+        value: $blueprint.flavor
+    outputs: 
         - name: cluster_name
   - name: portworx_module
     module_type: terraform
     source:
       source_type: github
       git: 
-        git_repo_url: "https://github.com/mattokc35/terraform-portworx-ibmcloud/tree/main/vpc_portworx"
+        git_repo_url: "https://github.com/mattokc35/terraformPortworxVPC/tree/main"
+    inputs:
         - name: ibmcloud_api_key
           value: $blueprint.ibmcloud_api_key
         - name: region
@@ -140,5 +141,5 @@ modules:
         - name: storage_classes
           value: $blueprint.storage_classes
           type: list(string)
-      outputs: 
+    outputs: 
         
