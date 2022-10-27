@@ -29,6 +29,16 @@ inputs:
     value: $blueprint.kube_version
   - name: flavor
     value: $blueprint.flavor
+  - name: portworx_service_name
+    value: $blueprint.portworx_service_name
+  - name: num_cloud_drives
+    value: $blueprint.num_cloud_drives
+  - name: max_storage_node_per_zone
+    value: $blueprint.max_storage_node_per_zone
+  - name: cloud_drives_sizes
+    value: $blueprint.cloud_drives_sizes
+  - name: storage_classes
+    value: $blueprint.storage_classes
 outputs:
 settings:
   - name: TF_VERSION
@@ -106,3 +116,28 @@ modules:
           value: $blueprint.flavor
       outputs: 
         - name: cluster_name
+  - name: portworx_module
+    module_type: terraform
+    source:
+      source_type: github
+      git: 
+        git_repo_url: "https://github.com/mattokc35/terraform-portworx-ibmcloud/tree/master/vpc_portworx"
+      inputs:
+        - name: ibmcloud_api_key
+          value: $blueprint.ibmcloud_api_key
+        - name: region
+          value: $blueprint.ibm_region
+        - name: portworx_service_name
+          value: $blueprint.portworx_service_name
+        - name: max_storage_node_per_zone
+          value: $blueprint.max_storage_node_per_zone
+        - name: cluster_name
+          value: $module.vpc_cluster_module.outputs.cluster_name
+        - name: num_cloud_drives
+          value: $blueprint.num_cloud_drives
+        - name: cloud_drives_sizes
+          value: $blueprint.cloud_drives_sizes
+        - name: storage_classes
+          value: $blueprint.storage_classes
+      outputs: 
+        
