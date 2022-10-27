@@ -121,8 +121,7 @@ modules:
     source:
       source_type: github
       git: 
-        git_repo_url: "https://github.com/mattokc35/terraform-portworx-ibmcloud/tree/master/vpc_portworx"
-      inputs:
+        git_repo_url: "https://github.com/mattokc35/terraformPortworxVPC"
         - name: ibmcloud_api_key
           value: $blueprint.ibmcloud_api_key
         - name: region
