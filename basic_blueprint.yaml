@@ -137,7 +137,9 @@ modules:
           value: $blueprint.num_cloud_drives
         - name: cloud_drives_sizes
           value: $blueprint.cloud_drives_sizes
+          type: list(number)
         - name: storage_classes
           value: $blueprint.storage_classes
+          type: list(string)
       outputs: 
         
