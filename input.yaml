@@ -17,6 +17,11 @@ cloud_drives_sizes: |
         200
     ]
   
-storage_classes: "["ibmc-vpc-block-5iops-tier", "ibmc-vpc-block-5iops-tier", "ibmc-vpc-block-5iops-tier"]"
+storage_classes: |
+      ["ibmc-vpc-block-5iops-tier", 
+      "ibmc-vpc-block-5iops-tier", 
+      "ibmc-vpc-block-5iops-tier"
+      ]
+      
 portworx_service_name: mtc-portworx-test-4-20ea8d30-20ea8d30-20ea8d30
 ssh_key_public_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCYBNiDu4JDL7gXeuS/UQwnC/sBEWtGM1nQ1eG7UoSiwQWOqJDAEwyD4X5i00QlEJNGnBpOL1bKVVyWQ6KdqVE7ZjiJEytukbHYlZrzfStHAjDB4WGy9szsgqb+vYX6BFrdTiEYwG6e75MT28K/B7Wu6bCmVrTQgKH7d8noHNJXTzYaU+oOXoARGPukp5/05iEcEQEJZjTdx4oK7AJ7eytp0Ve7sWosZ04qF6Cwyva6muR/b09evF/4CGnSjAe/fThMJO83VrEVQCxB1HHTNfsvNWsfBh7s1XyItSjQDWSskgUtZPDCPt4UNw/yGfzZrO7IBR2OlpmjmTbZqK/MZEex
