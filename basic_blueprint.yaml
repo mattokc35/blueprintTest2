@@ -1,5 +1,5 @@
 name: "Blueprint_Basic_2"
-type: "blueprint"
+type: blueprint
 schema_version: "1.0.0"
 description: "Simple four module blueprint. Deploys VPC with 2 subnets, public gateway, and VSI, then IKS Cluster spread across two zones and finally installs portworx"
 inputs:
