@@ -1,11 +1,11 @@
 ibm_region : us-south
-vpc_name : mattokc35testblueprints5vpc
+vpc_name : mtc-vpc-2-subnets-test-3
 ssh_key_name: mattokc35key8
 image_id: r006-e0d3b6fb-5421-4421-9061-0ca9f79a4978
 vsi_profile: bx2d-16x64
-vsi_name: test-vsi-12345781111
-cluster_name: mattokc35-us-south-cluster-4
-worker_count: 3
+vsi_name: test-vsi-546
+cluster_name: mtc-cluster-2-zones-test-2
+worker_count: 1
 kube_version: 1.23.12
 flavor: bx2.2x8
 max_storage_node_per_zone: 2
@@ -24,5 +24,5 @@ storage_classes: |
         "ibmc-vpc-block-5iops-tier"
     ]
       
-portworx_service_name: mtc-portworx-test-4-20ea8d30-20ea8d30-20ea8d30
+portworx_service_name: mtc-portworx-test-5
 ssh_key_public_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCYBNiDu4JDL7gXeuS/UQwnC/sBEWtGM1nQ1eG7UoSiwQWOqJDAEwyD4X5i00QlEJNGnBpOL1bKVVyWQ6KdqVE7ZjiJEytukbHYlZrzfStHAjDB4WGy9szsgqb+vYX6BFrdTiEYwG6e75MT28K/B7Wu6bCmVrTQgKH7d8noHNJXTzYaU+oOXoARGPukp5/05iEcEQEJZjTdx4oK7AJ7eytp0Ve7sWosZ04qF6Cwyva6muR/b09evF/4CGnSjAe/fThMJO83VrEVQCxB1HHTNfsvNWsfBh7s1XyItSjQDWSskgUtZPDCPt4UNw/yGfzZrO7IBR2OlpmjmTbZqK/MZEex
