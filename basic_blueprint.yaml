@@ -87,6 +87,7 @@ modules:
       - name: ssh_key_public_key
         value: $blueprint.ssh_key_public_key
     outputs: 
+      - name: vsi_id
   - name: vpc_cluster_module
     module_type: terraform
     source:
@@ -115,7 +116,7 @@ modules:
       - name: flavor
         value: $blueprint.flavor
     outputs: 
-        - name: cluster_name
+      - name: cluster_name
   - name: portworx_module
     module_type: terraform
     source:
